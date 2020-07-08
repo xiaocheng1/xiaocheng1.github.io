@@ -64,14 +64,38 @@
 </header>
       <div class="outer">
         <section id="main">
-extends includes/layout.pug
+  
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2020/07/08/hello-world/" class="archive-article-date">
+  <time datetime="2020-07-08T06:09:59.774Z" itemprop="datePublished">Jul 8</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/07/08/hello-world/">Hello World</a>
+    </h1>
+  
 
-block content
-  include ./includes/mixins/article-sort.pug
-  #archive
-    .article-sort-title= 'Articles' + ' - ' + site.posts.length
-    +articleSort(page.posts)
-  include includes/partial/page-nav.pug
+    </header>
+  </div>
+</article>
+  
+  
+    </div></section>
+  
 
 </section>
         
