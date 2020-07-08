@@ -54,7 +54,7 @@
       </nav>
       <nav id="sub-nav">
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -64,38 +64,14 @@
 </header>
       <div class="outer">
         <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/07/08/hello-world/" class="archive-article-date">
-  <time datetime="2020-07-08T06:09:59.774Z" itemprop="datePublished">Jul 8</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/08/hello-world/">Hello World</a>
-    </h1>
-  
+extends includes/layout.pug
 
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+block content
+  include ./includes/mixins/article-sort.pug
+  #archive
+    .article-sort-title= 'Articles' + ' - ' + site.posts.length
+    +articleSort(page.posts)
+  include includes/partial/page-nav.pug
 
 </section>
         
@@ -105,7 +81,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2020 John Doe<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
